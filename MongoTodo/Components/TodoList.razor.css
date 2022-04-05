@@ -1,0 +1,17 @@
+﻿.todo-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.todo-item {
+    display: flex;
+    align-content: center;
+}
+
+.todo-check {
+    margin-right: 2rem;
+    height: 24px;
+    width: 24px;
+    border: solid 1px gray;
+    border-radius: 50%;
+}

@@ -1,0 +1,36 @@
+﻿@page "/"
+@using System.ComponentModel
+
+@implements IDisposable
+@inject ITodoViewModel ViewModel
+
+<PageTitle>My Todo list</PageTitle>
+
+<h1>Todo list</h1>
+
+<CascadingValue Value="ViewModel" Name="ViewModel">
+    <TodoList />
+    <TodoForm />
+</CascadingValue>
+
+@code {
+
+    protected override async Task OnInitializedAsync()
+    {
+        ViewModel.PropertyChanged += async (sender, e) => {
+           await InvokeAsync(StateHasChanged);
+        };
+        
+        await base.OnInitializedAsync(); 
+    }
+    
+    async void OnPropertyChangedEventHandler(object sender, PropertyChangedEventArgs e)
+    {
+        await InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        ViewModel.PropertyChanged -= OnPropertyChangedEventHandler;
+    }
+}

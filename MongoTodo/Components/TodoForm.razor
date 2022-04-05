@@ -1,0 +1,40 @@
+﻿<hr />
+
+<EditForm Model="@ViewModel.TodoItem" OnValidSubmit="@SaveTodoItem">
+    <div class="col-4">
+        <div class="form-group">
+            <label for="title">Titel</label>
+            <InputText 
+                class="form-control" 
+                id="title" 
+                @bind-Value="@ViewModel.TodoItem.Title" 
+                placeholder="Vul de titel van het to-do item in."
+            />
+        </div>
+        <div class="form-group">
+            <label for="date">Wanneer</label>
+            <InputDate 
+                class="form-control" 
+                id="date" 
+                @bind-Value="@ViewModel.TodoItem.Date" 
+            />
+        </div>
+        <div class="form-check">
+            <InputCheckbox class="form-check-input" id="done" @bind-Value="@ViewModel.TodoItem.Finished" />
+            <label for="done" class="form-check-label">Done</label>
+        </div>
+        <input type="hidden" @bind-value="@ViewModel.TodoItem.Id" />
+        <button type="submit" class="btn btn-primary" disabled="@ViewModel.IsBusy">Save</button>
+    </div>
+</EditForm>
+
+@code {
+    [CascadingParameter(Name = "ViewModel")]
+    ITodoViewModel ViewModel { get; set; }
+
+    void SaveTodoItem()
+    {
+        ViewModel.SaveToDoItem(ViewModel.TodoItem);
+        ViewModel.TodoItem = new TodoItem();
+    }
+}

@@ -1,0 +1,8 @@
+C:\Users\niels\Projects\nots-win\beroepsproduct-2\MongoTodo\obj\Debug\net6.0\TodoFrontend.csproj.AssemblyReference.cache
+C:\Users\niels\Projects\nots-win\beroepsproduct-2\MongoTodo\obj\Debug\net6.0\TodoFrontend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\niels\Projects\nots-win\beroepsproduct-2\MongoTodo\obj\Debug\net6.0\TodoFrontend.AssemblyInfoInputs.cache
+C:\Users\niels\Projects\nots-win\beroepsproduct-2\MongoTodo\obj\Debug\net6.0\TodoFrontend.AssemblyInfo.cs
+C:\Users\niels\Projects\nots-win\beroepsproduct-2\MongoTodo\obj\Debug\net6.0\TodoFrontend.csproj.CoreCompileInputs.cache
+C:\Users\niels\Projects\nots-win\beroepsproduct-2\MongoTodo\obj\Debug\net6.0\TodoFrontend.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\niels\Projects\nots-win\beroepsproduct-2\MongoTodo\obj\Debug\net6.0\TodoFrontend.RazorAssemblyInfo.cache
+C:\Users\niels\Projects\nots-win\beroepsproduct-2\MongoTodo\obj\Debug\net6.0\TodoFrontend.RazorAssemblyInfo.cs
